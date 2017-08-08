@@ -82,13 +82,13 @@ async def kick(ctx, user: discord.Member = None):
     """Kicks the mentioned member from the server."""
     if ctx.message.author.server_permissions.kick_members == True:
         if user != None:
-            embed = discord.Embed(colour=0x5de316)
+            embed = discord.Embed(colour=0xafd90f)
             embed.add_field(name="­",
                             value="{} has kicked {} for {}".format(ctx.message.author.mention, user.mention, reason))
             await bot.say(embed=embed)
             await bot.kick(user)
         else:
-            embed = discord.Embed(title="You need to specify user first", value="­", colour=0x5de316)
+            embed = discord.Embed(title="You need to specify user first", value="­", colour=0x54ee0e)
             await bot.say(embed=embed)
     else:
         await bot.say("You don't have permissions to kick anybody, try `kickme` command instead.")
